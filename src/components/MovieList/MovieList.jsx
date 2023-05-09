@@ -15,6 +15,7 @@ function MovieList() {
 
     const viewDetails = movie => {
         dispatch({ type: 'SET_MOVIE', payload: movie });
+        dispatch({ type: 'FETCH_GENRES', id:movie.id});
         history.push(`/details/${movie.id}`)
     }
 
